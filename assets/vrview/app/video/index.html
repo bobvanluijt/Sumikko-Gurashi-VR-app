@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VR APP</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="robots" CONTENT="noindex, nofollow">
+    <meta charset="utf-8" />
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <!-- header font -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+  </head>
+  <style>
+    body {
+      background-color: #fdfd96;
+    }
+    h1, h2 {
+        font-family: 'Cabin Sketch', cursive;
+        text-align : center;
+        font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+
+  </style>
+  <body>
+
+    <h1>Sumikko Gurashi</h1>
+    <h2>VR app</h2>
+
+    <div id="vrview"></div>
+
+    <div id="controls">
+      <div id="toggleplay" class="paused"></div>
+      <div id="togglemute"></div>
+    </div>
+
+    <script src="../../build/vrview.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

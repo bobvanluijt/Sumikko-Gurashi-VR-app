@@ -1,0 +1,29 @@
+{
+  "name": "sumikko-gurashi",
+  "version": "1.0.0",
+  "description": "Sumikko Gurashi VR app",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobvanluijt/Sumikko-Gurashi-VR-app.git"
+  },
+  "keywords": [
+    "Sumikko",
+    "Gurashi",
+    "VR",
+    "Cardboard"
+  ],
+  "author": "Bob van Luijt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobvanluijt/Sumikko-Gurashi-VR-app/issues"
+  },
+  "homepage": "https://github.com/bobvanluijt/Sumikko-Gurashi-VR-app#readme"
+}

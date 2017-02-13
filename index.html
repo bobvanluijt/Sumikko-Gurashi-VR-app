@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sumikko Gurashi VR app">
+    <meta name="author"      content="Bob van Luijt">
+
+    <!-- set sharing meta tags -->
+    <meta property="og:image"     content="./assets/img/logo/penguin.png"/>
+    <meta property="og:title"     content="Sumikko Gurashi VR app"/>
+    <meta property="og:url"       content="http://b❤️r.bob.wtf"/>
+    <meta property="og:site_name" content="bob.wtf"/>
+
+    <title>Sumikko Gurashi VR app</title>
+
+    <!-- include bootstrap -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- body font -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <!-- header font -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+
+    <script src="./assets/js/vrview.js"></script>
+
+    <!-- some basic style edits -->
+    <style>
+    body {
+        font-family     : 'Indie Flower', cursive;
+        background-color: #fdfd96;
+    }
+
+    h1, h2 {
+        font-family: 'Cabin Sketch', cursive;
+        text-align : center;
+    }
+
+    #logo {
+        position   : relative;
+        width      : 340px;
+        left       : 50%;
+        margin-left: -170px;
+        cursor     : pointer;
+    }
+
+    iframe {
+        border: 0;
+    }
+    </style>
+
+    <!-- simple script to start app -->
+    <script>
+        'use strict';
+
+        // function to run the app
+        function runApp(i){
+
+            // remove logo
+            document
+              .getElementById('logo')
+              .parentElement
+              .style
+              .display = "none";
+
+            // remove all text divs
+            var i;
+            var x = document.getElementsByClassName('info');
+            for (i = 0; i < x.length; i++) {
+                x[i]
+                  .style
+                  .display = "none";
+            }
+
+            // enable VR app
+            location.assign("/assets/vrview/app/video/index.html");
+        }
+    </script>
+  </head>
+
+  <!-- vr app body -->
+  <body>
+    <!-- titles -->
+    <div class="container">
+      <div class="mt-1">
+        <h1>Sumikko Gurashi</h1>
+        <h2>VR app</h2>
+      </div>
+
+      <!-- THE LOGO, PUSH IT TO GET STARTED -->
+      <p>
+        <img src="./assets/img/logo/penguin.svg" id="logo" onclick="runApp(this)">
+      </p>
+      
+      <!-- THIS IS THE IFRAME WITH THE VR APP-->
+      <span id="vrapp" style="display:none;">
+        <!--iframe scrolling="no" allowfullscreen src="./node_modules/vrview/index.html?video=../../assets/mp4/scene-leaves.mp4&is_stereo=false&../../assets/img/placeholder.jpg" style="width:100%; min-height:380px"></iframe-->
+      </span>
+
+      <!-- bunch of info boxes -->
+      <p class="info">
+        This is the <a href="http://www.sumikkogurashi.com/" target="_blank">Sumikko Gurashi VR app</a> it is a gift for my girlfriend but you can use it too 😊. You can start the app by clicking the penguin in the middle. Have fun!
+      </p>
+      <p class="info">
+        It works best using your mobile phone or by using a <a href="https://vr.google.com/cardboard/" target="_blank">Google Cardboard</a>.
+        If you turn you phone sideways and fold it into the cardboard, you get the best VR experience.
+      </p>
+      <p class="info" style="text-align: center">
+        By <a href="https://bob.wtf" target="_blank">Bob</a> and available on <a href="https://github.com/bobvanluijt/Sumikko-Gurashi-VR-app" target="_blank">Github</a>.<br><span style="font-size: 0.5rem">Not affiliated to San-X, just a fun project</span> 
+      </p>
+
+    </div>
+  </body>
+</html>
