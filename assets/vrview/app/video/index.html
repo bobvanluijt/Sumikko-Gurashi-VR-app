@@ -6,24 +6,32 @@
     <meta name="robots" CONTENT="noindex, nofollow">
     <meta charset="utf-8" />
     <link href="../style.css" rel="stylesheet" type="text/css">
+    <!-- body font -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <!-- header font -->
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <!-- play the song -->
+    <script>
+      function playTheSong(){
+        new Audio('/assets/mp3/song.mp3').play().loop;
+      }
+    </script>
   </head>
   <style>
     body {
-      background-color: #fdfd96;
+        font-family     : 'Indie Flower', cursive;
+        background-color: #fdfd96;
     }
     h1, h2 {
         font-family: 'Cabin Sketch', cursive;
         text-align : center;
-        font-size: 2.5rem;
+        font-size  : 2.5rem;
     }
     h2 {
       font-size: 2rem;
     }
-
   </style>
-  <body>
+  <body onload="playTheSong()">
 
     <h1>Sumikko Gurashi</h1>
     <h2>VR app</h2>
@@ -33,6 +41,12 @@
     <div id="controls">
       <div id="toggleplay" class="paused"></div>
       <div id="togglemute"></div>
+    </div>
+
+    <div style="text-align: center">
+      <img src="/assets/img/cardboard.png" style="position:relative; width:120px;"><br>
+      Hold your phone in landscape mode to use the app.<br>
+      More info on using <a href="https://vr.google.com/cardboard/" target="_blank">Cardboard</a>
     </div>
 
     <script src="../../build/vrview.js"></script>
